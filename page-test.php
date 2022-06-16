@@ -1,4 +1,3 @@
-
 <?php
 
 /**
@@ -12,7 +11,7 @@ get_header();
 /**
  * Home hero
  */
-include(locate_template('template-parts/page/home/holding.php'));
+include(locate_template('template-parts/page/test/test.php'));
 
 ?>
 

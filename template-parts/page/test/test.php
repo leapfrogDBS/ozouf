@@ -1,16 +1,18 @@
 <div class="text-container">
-    <div id="logo-container">
-        <img id="logo-image" src="<?php echo get_template_directory_uri();?>/img/logo-no-eyes-large.svg">
-        <div class="eyes">
-            <div class="eye">
-                <div class="ball">
+    <div class="col logo-col">
+        <div id="logo-container">
+            <img id="logo-image" src="<?php echo get_template_directory_uri();?>/img/logo-no-eyes-large.svg">
+            <div class="eyes">
+                <div class="eye">
+                    <div class="ball">
+                    </div>
                 </div>
-            </div>
-            <div class="eye">
-                <div class="ball">
+                <div class="eye">
+                    <div class="ball">
+                    </div>
                 </div>
-            </div>
-        </div>    
+            </div>    
+        </div>
     </div>
     <div class="video-container">
         <img id="service-text" src="<?php echo get_template_directory_uri();?>/img/text.png">

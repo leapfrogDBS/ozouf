@@ -178,6 +178,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 function add_custom_scripts() {
 	wp_enqueue_script('app-js', get_template_directory_uri() . '/js/app.js');
+	wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/css/tailwind.css');
 
 }
 
@@ -188,3 +189,6 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	
 }
+
+/* Disable WordPress Admin Bar for all users */
+add_filter( 'show_admin_bar', '__return_false' );
