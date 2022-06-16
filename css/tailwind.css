@@ -625,6 +625,14 @@ video {
   margin-bottom: 10vh !important;
 }
 
+.mb-\[100px\] {
+  margin-bottom: 100px !important;
+}
+
+.mb-\[1000px\] {
+  margin-bottom: 1000px !important;
+}
+
 .block {
   display: block !important;
 }
@@ -693,6 +701,10 @@ video {
 .py-10 {
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
+}
+
+.pb-\[1000px\] {
+  padding-bottom: 1000px !important;
 }
 
 .text-center {
