@@ -1,5 +1,5 @@
 <div class="text-container">
-    <h1>Auto Deploy</h1>
+    <h1>Auto Deploy2</h1>
     <div id="logo-container">
         <img id="logo-image" src="<?php echo get_template_directory_uri();?>/img/logo-no-eyes-large.svg">
         <div class="eyes">
