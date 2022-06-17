@@ -1,4 +1,4 @@
-<div class="section h-screen bg-yellow" id="holding-page">
+<div class="section bg-yellow" id="holding-page">
     <div class="container flex flex-col justify-between h-full py-10">
         <div class="row mb-8">
             <div class="col flex flex-col items-center md:items-end">
