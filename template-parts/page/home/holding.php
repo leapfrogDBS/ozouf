@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             <div class="col flex flex-col mb-[50px]">
-                <h1 class="uppercase text-center text-lg md:text-2xl font-black tracking-widest mb-[10vh]">New site coming soon</h1>
+                <h1 class="uppercase text-center text-lg md:text-2xl font-black tracking-widest mb-[70px]">New site coming soon</h1>
                 <div id="logo-container" class=" w-2/3 sm:w-1/2 md:w-[280px] m-auto">
                     <img class="" src="<?php echo get_template_directory_uri();?>/img/holding-logo.png">
                     <div class="eyes">
