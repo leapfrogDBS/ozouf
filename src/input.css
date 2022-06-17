@@ -6,8 +6,9 @@
     font-family:"corporate-s";
 }
 .container {
-    width: 90%;
+    width: 95%;
     margin: auto;
+    max-width: none !important;
 }
 #masthead {
 	display: none;
