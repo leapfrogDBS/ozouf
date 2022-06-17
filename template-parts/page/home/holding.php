@@ -1,5 +1,5 @@
 <div class="section bg-yellow" id="holding-page">
-    <div class="container flex flex-col justify-between h-full py-10">
+    <div class="container flex flex-col justify-between py-10">
         <div class="row mb-8">
             <div class="col flex flex-col items-center md:items-end">
                 <div class="flex items-center md:w-[260px]">
