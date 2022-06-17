@@ -3,12 +3,12 @@
         <div class="row mb-8">
             <div class="col flex flex-col items-center md:items-end">
                 <div class="flex items-center md:w-[260px]">
-                    <img class="h-[18px] md:h-[25px]" src="<?php echo get_template_directory_uri();?>/img/asterisk-black.svg">
-                    <a class="ml-[12px] text-lg md:text-2xl font-semibold" href="tel:004401534780080">+44 (0)1534 780080</a>
+                    <img class="h-[18px] md:h-[25px]" src="<?php echo get_template_directory_uri();?>/img/Phone.png">
+                    <a class="ml-[8px] text-lg md:text-2xl font-semibold" href="tel:004401534780080">+44 (0)1534 780080</a>
                 </div>
                 <div class="flex items-center md:w-[260px]">
-                    <img class="h-[18px] md:h-[25px]" src="<?php echo get_template_directory_uri();?>/img/asterisk-black.svg">
-                    <a class="ml-[12px] text-lg md:text-2xl font-semibold" href="mailto:hello@ozouf.net">hello@ozouf.net</a>
+                    <img class="h-[18px] md:h-[25px]" src="<?php echo get_template_directory_uri();?>/img/Email.png">
+                    <a class="ml-[8px] text-lg md:text-2xl font-semibold" href="mailto:hello@ozouf.net">hello@ozouf.net</a>
                 </div>
             </div>
         </div>
