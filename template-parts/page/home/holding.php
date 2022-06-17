@@ -1,5 +1,5 @@
-<div class="section bg-yellow" id="holding-page">
-    <div class="container flex flex-col justify-between py-10">
+<div class="section bg-yellow " id="holding-page">
+    <div class="container flex flex-col h-full justify-between py-10">
         <div class="row mb-8">
             <div class="col flex flex-col items-center md:items-end">
                 <div class="flex items-center md:w-[260px]">
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col flex flex-col mb-[25vh]">
+            <div class="col flex flex-col mb-[50px]">
                 <h1 class="uppercase text-center text-lg md:text-2xl font-black tracking-widest mb-[10vh]">New site coming soon</h1>
                 <div id="logo-container" class=" w-2/3 sm:w-1/2 md:w-[280px] m-auto">
                     <img class="" src="<?php echo get_template_directory_uri();?>/img/holding-logo.png">
@@ -58,6 +58,11 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 
 </script>
