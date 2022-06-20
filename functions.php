@@ -192,3 +192,11 @@ if( function_exists('acf_add_options_page') ) {
 
 /* Disable WordPress Admin Bar for all users */
 add_filter( 'show_admin_bar', '__return_false' );
+
+/**
+ * Hide the Page and Post Content Editor - Gutenberg
+ */
+add_action( 'init', function() {
+	remove_post_type_support( 'post', 'editor' );
+	remove_post_type_support( 'page', 'editor' );
+   }, 99);
