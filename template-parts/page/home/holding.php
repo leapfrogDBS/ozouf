@@ -16,14 +16,14 @@
             <div class="col flex flex-col mb-[50px]">
                 <h1 class="uppercase text-center text-lg md:text-2xl font-black tracking-widest mb-[70px]">New site coming soon</h1>
                 <div id="logo-container" class=" w-2/3 sm:w-1/2 md:w-[280px] m-auto">
-                    <img class="" src="<?php echo get_template_directory_uri();?>/img/holding-logo.png">
+                    <video muted="muted" src="<?php echo get_template_directory_uri();?>/mp4/holding-animation.mp4"></video>
                     <div class="eyes">
                         <div class="eye">
-                            <div class="ball w-[8px] h-[8px] sm:w-[10px] sm:h-[10px]">
+                            <div class="ball ball-holding w-[8px] h-[8px] sm:w-[10px] sm:h-[10px]">
                             </div>
                         </div>
                         <div class="eye">
-                            <div class="ball w-[8px] h-[8px] sm:w-[10px] sm:h-[10px]">
+                            <div class="ball ball-holding w-[8px] h-[8px] sm:w-[10px] sm:h-[10px]">
                             </div>
                         </div>
                     </div>    
@@ -39,7 +39,7 @@
 </div>
 
 <script>
-    var balls = document.querySelectorAll('.ball');
+    var balls = document.querySelectorAll('.ball-holding');
 
     document.onmousemove = function() {
         var x = event.clientX * 100 / window.innerWidth + "%";
@@ -65,4 +65,39 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+
+const video = document.querySelector("video");
+
+video.play();
+
+
 </script>
+
+
+<style>
+    footer {
+        display: none;
+    }
+    #masthead {
+        display: none;
+    }
+
+    .eyes {
+        animation: 3s fadeIn;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+    }
+
+
+@keyframes fadeIn {
+
+  85% {
+      visibility: hidden;
+      opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+</style>

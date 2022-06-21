@@ -2,7 +2,9 @@
 		<div class="container">
 			<div class="row w-3/4 m-auto">
 				<div class="col">
-				<?php if ( have_posts() ) : ?>
+				<?php if ( have_posts() ) : 
+					
+				?>
 
 					<?php
 						/* Start the Loop */
@@ -15,14 +17,23 @@
 							* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 							*/
 							
-							$post_copy = get_field('post_copy'); 
 							$post_excerpt = get_field('post_excerpt'); 
 							$post_thumbnail_image = get_field('post_thumbnail_image'); 
 							$post_subtitle = get_field('post_subtitle'); 
-							
 
+							
+							
+							if (($i%3==0 || $i%4==0) && $i!=0) {
 							?>
-							<a href="<?php echo the_permalink(); ?>" class="grid grid-cols-2 bg-grey rounded-lg mb-10">
+								<a href="<?php echo the_permalink(); ?>" class="flex flex-col bg-grey rounded-lg mb-10">
+							<?php
+							} else { 
+							?>
+								<a href="<?php echo the_permalink(); ?>" class="grid grid-cols-2 bg-grey rounded-lg mb-10">
+							<?php
+							}
+							?>
+							
 								<img src="<?php echo $post_thumbnail_image['url'] ?>">
 								<div class="flex flex-col justify-center p-5">
 									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle; ?></h3>
@@ -32,6 +43,7 @@
 							</a>
 
 							<?php
+
 						endwhile;
 
 						the_posts_navigation();

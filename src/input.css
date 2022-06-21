@@ -14,9 +14,7 @@
     margin: auto;
     max-width: 1370px !important;
 }
-#masthead {
-	display: none;
-}
+
 #logo-container {
 	display: inline-block;
 }
@@ -28,18 +26,18 @@
 	height: 33%;
 }
 .eye {
-	width: 13%;
+	width: 14%;
     height: 100%;
-    background: #fff;
+    background: transparent;
     display: inline-block;
     position: relative;
     overflow: hidden;
     margin-left: 5.5%;
-    margin-right: 20.2%;
+    margin-right: 17%;
 }
 .ball {
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 	background: #000;
 	position: absolute;
 	top: 50%;
