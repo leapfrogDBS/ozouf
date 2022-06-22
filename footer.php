@@ -78,8 +78,21 @@
                         <?php echo do_shortcode('[contact-form-7 id="48" title="Footer Contact Form"]'); ?>
                     </div>
                 </div>
-                
             </div>
+            <div class="grid grid-cols-3 hidden">
+<div class="pr-2">
+                                <input type="text" name="name" id="name" placeholder="Name" class="placeholder:text-black font-semibold p-2 text-xl mb-2 w-full">
+                                <input type="text" name="email" id="email" placeholder="Email" class="placeholder:text-black font-semibold p-2 text-xl w-full">
+                            </div>
+                            <div class="col-span-2 flex flex-col">
+                                <textarea name="message" id="message" placeholder="Message" class="placeholder:text-black font-semibold p-2 text-xl h-40 mb-2"></textarea>
+                                <div class="submit-container inline-flex items-center bg-black px-3 py-0.5 self-end w-auto"> 
+                                    <img class="h-[18px] md:h-[22px] mr-2" src="/ozouf/wp-content/themes/ozouf/img/asterisk-yellow.svg">
+                                    <input type="hidden" name="submitted" value="1">
+                                    <input class="text-yellow text-2xl font-semibold" type="submit" value="SEND">
+                                </div>
+                            </div>
+</div>
         </div>
     </div>
 </footer><!-- #colophon -->
