@@ -25,14 +25,14 @@
                         
                 // Case: Single Card Row.
                 if( get_row_layout() == 'single_card_row' ):
-                    
-                    $thumbnail_image = get_sub_field('post_thumbnail_image');
-                    $post_subtitle = get_sub_field('post_subtitle');
-                    $post_excerpt = get_sub_field('post_excerpt');
-                    $post_link = get_sub_field('post_link');
-                    $permalink = get_permalink( $post_link->ID );
-                    $post_video_link = get_sub_field('post_video_link');
-                                                            
+                                        
+                        $thumbnail_image = $card['post_thumbnail_image'];
+                        $post_subtitle = $card['post_subtitle'];
+                        $post_excerpt = get_sub_field('post_excerpt');
+                        $post_link = get_sub_field('post_link');
+                        $permalink = get_permalink( $post_link->ID );
+                        $post_video_link = get_sub_field('post_video_link');
+                 
                     ?>
 
                     <div class="row w-3/4 m-auto mb-20">
