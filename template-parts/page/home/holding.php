@@ -16,7 +16,7 @@
             <div class="col flex flex-col mb-[50px]">
                 <h1 class="uppercase text-center text-lg md:text-2xl font-black tracking-widest mb-[70px]">New site coming soon</h1>
                 <div id="logo-container" class=" w-2/3 sm:w-1/2 md:w-[280px] m-auto">
-                    <video muted="muted" src="<?php echo get_template_directory_uri();?>/mp4/holding-animation.mp4"></video>
+                    <video muted="muted" autoplay muted playsinline src="<?php echo get_template_directory_uri();?>/mp4/holding-animation.mp4"></video>
                     <div class="eyes">
                         <div class="eye">
                             <div class="ball ball-holding w-[8px] h-[8px] sm:w-[10px] sm:h-[10px]">
