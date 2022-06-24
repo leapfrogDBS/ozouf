@@ -25,14 +25,18 @@
                         
                 // Case: Single Card Row.
                 if( get_row_layout() == 'single_card_row' ):
-                                        
-                        $thumbnail_image = $card['post_thumbnail_image'];
-                        $post_subtitle = $card['post_subtitle'];
-                        $post_excerpt = get_sub_field('post_excerpt');
-                        $post_link = get_sub_field('post_link');
-                        $permalink = get_permalink( $post_link->ID );
-                        $post_video_link = get_sub_field('post_video_link');
-                 
+                    
+                    $card = get_sub_field('single_card');
+                                    
+                    $thumbnail_image = $card['post_thumbnail_image'];
+                    $link_to_post = $card['link_to_post'];
+                    
+                    $post_subtitle = $card['post_subtitle'];
+                    $post_excerpt = $card['post_excerpt'];
+                    $post_link = $card['post_link'];
+                    $permalink = get_permalink($post_link->ID);
+                    $post_video_link = $card['post_video_link'];
+                                                            
                     ?>
 
                     <div class="row w-3/4 m-auto mb-20">
@@ -64,16 +68,20 @@
 
                 // Case: Double Card Row
                 elseif( get_row_layout() == 'double_card_row' ): 
-                    $thumbnail_image_1 = get_sub_field('post_thumbnail_image_1');
-                    $post_subtitle_1 = get_sub_field('post_subtitle_1');
-                    $post_excerpt_1 = get_sub_field('post_excerpt_1');
-                    $post_link_1 = get_sub_field('post_link_1');
+
+                    $card1 = get_sub_field('card_1');
+                    $card2 = get_sub_field('card_2');
+
+                    $thumbnail_image_1 = $card1['post_thumbnail_image_1'];
+                    $post_subtitle_1 = $card1['post_subtitle_1'];
+                    $post_excerpt_1 = $card1['post_excerpt_1'];
+                    $post_link_1 = $card1['post_link_1'];
                     $permalink_1 = get_permalink( $post_link_1->ID );
 
-                    $thumbnail_image_2 = get_sub_field('post_thumbnail_image_2');
-                    $post_subtitle_2 = get_sub_field('post_subtitle_2');
-                    $post_excerpt_2 = get_sub_field('post_excerpt_2');
-                    $post_link_2 = get_sub_field('post_link_2');
+                    $thumbnail_image_2 = $card2['post_thumbnail_image_2'];
+                    $post_subtitle_2 = $card2['post_subtitle_2'];
+                    $post_excerpt_2 = $card2['post_excerpt_2'];
+                    $post_link_2 = $card2['post_link_2'];
                     $permalink_2 = get_permalink( $post_link_2->ID );
                     
                     ?>
@@ -103,22 +111,27 @@
 
                     // Case: Treble Card Row
                     elseif( get_row_layout() == 'treble_card_row' ): 
-                    $thumbnail_image_1 = get_sub_field('post_thumbnail_image_1');
-                    $post_subtitle_1 = get_sub_field('post_subtitle_1');
-                    $post_excerpt_1 = get_sub_field('post_excerpt_1');
-                    $post_link_1 = get_sub_field('post_link_1');
+
+                    $card1 = get_sub_field('card_1');
+                    $card2 = get_sub_field('card_2');
+                    $card3 = get_sub_field('card_3');
+
+                    $thumbnail_image_1 = $card1['post_thumbnail_image_1'];
+                    $post_subtitle_1 = $card1['post_subtitle_1'];
+                    $post_excerpt_1 = $card1['post_excerpt_1'];
+                    $post_link_1 = $card1['post_link_1'];
                     $permalink_1 = get_permalink( $post_link_1->ID );
 
-                    $thumbnail_image_2 = get_sub_field('post_thumbnail_image_2');
-                    $post_subtitle_2 = get_sub_field('post_subtitle_2');
-                    $post_excerpt_2 = get_sub_field('post_excerpt_2');
-                    $post_link_2 = get_sub_field('post_link_2');
+                    $thumbnail_image_2 = $card2['post_thumbnail_image_2'];
+                    $post_subtitle_2 = $card2['post_subtitle_2'];
+                    $post_excerpt_2 = $card2['post_excerpt_2'];
+                    $post_link_2 = $card2['post_link_2'];
                     $permalink_2 = get_permalink( $post_link_2->ID );
 
-                    $thumbnail_image_3 = get_sub_field('post_thumbnail_image_3');
-                    $post_subtitle_3 = get_sub_field('post_subtitle_3');
-                    $post_excerpt_3 = get_sub_field('post_excerpt_3');
-                    $post_link_3 = get_sub_field('post_link_3');
+                    $thumbnail_image_3 = $card3['post_thumbnail_image_3'];
+                    $post_subtitle_3 = $card3['post_subtitle_3'];
+                    $post_excerpt_3 = $card3['post_excerpt_3'];
+                    $post_link_3 = $card3['post_link_3'];
                     $permalink_3 = get_permalink( $post_link_3->ID );
                     
                     ?>

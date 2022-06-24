@@ -950,7 +950,7 @@ video {
 
 .bg-yellow {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 240 0 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(255 255 0 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-grey {
@@ -1077,7 +1077,7 @@ video {
 
 .text-yellow {
   --tw-text-opacity: 1 !important;
-  color: rgb(255 240 0 / var(--tw-text-opacity)) !important;
+  color: rgb(255 255 0 / var(--tw-text-opacity)) !important;
 }
 
 .underline {
