@@ -31,57 +31,7 @@
                 </div> 
             </div>
         </div>
-            <?php
-            // Check value exists.
-            if( have_rows('image_gallery') ):
-        
-                // Loop through rows.
-                while ( have_rows('image_gallery') ) : the_row();
-
-                    // Case: 2/3 - 1/3
-                    if( get_row_layout() == 'two_third_one_third' ):
-                        $image_1 = get_sub_field('post_image_1');
-                        $image_2 = get_sub_field('post_image_2');
-                    ?>
-                        <div class="row grid grid-cols-3 gap-x-20 mb-20"> 
-                            <div class="col col-span-2">
-                                <img src="<?php echo $image_1['url']; ?>" class="h-full rounded-2xl object-cover">
-                            </div>
-                            <div class="col col-span-1">
-                                <img src="<?php echo $image_2['url']; ?>" class="h-full rounded-2xl object-cover">
-                            </div>
-                        </div>
-                    <?php    
-                    elseif( get_row_layout() == 'half_and_half' ):
-                        $image_1 = get_sub_field('post_image_1');
-                        $image_2 = get_sub_field('post_image_2');
-                    ?>
-                        <div class="row grid grid-cols-2 gap-x-20 mb-20"> 
-                            <div class="col">
-                                <img src="<?php echo $image_1['url']; ?>" class="h-full rounded-2xl object-cover">
-                            </div>
-                            <div class="col">
-                                <img src="<?php echo $image_2['url']; ?>" class="h-full rounded-2xl object-cover">
-                            </div>
-                        </div>
-                    <?php    
-                        
-                    elseif( get_row_layout() == 'full_width' ):
-                        $image_1 = get_sub_field('post_image_1');
-                    ?>
-                        <div class="row mb-20"> 
-                            <div class="col">
-                                <img src="<?php echo $image_1['url']; ?>" class="w-full rounded-2xl object-cover">
-                            </div>
-                        </div>
-                    <?php    
-                    endif;
-
-                // End loop.
-                endwhile;               
-                
-            endif;
-            ?>
+            
                                     
             <?php
             endwhile; // End of the loop.

@@ -12,6 +12,8 @@ get_header();
 <main id="primary" class="site-main">
 <?php
 	include(locate_template('template-parts/post/single/post-content.php'));
+	get_template_part( 'template-parts/content', 'page' );
+
 ?>
 </main><!-- #main -->		
 

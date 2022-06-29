@@ -31,7 +31,7 @@
 	<header id="masthead" class="site-header">
 		<div class="header-container desktop-header-container hidden md:block bg-yellow">
 			<nav class="pt-[48px] pb-[20px]">
-				<div class="container flex items-start justify-between items-center">
+				<div class="w-[95%] ml-auto mr-0 flex items-start justify-between items-center">
 					<div id="logo-container" class="logo-container w-[138px] md:w-[194px]">
 						<a href="<?php echo get_home_url(); ?>">
 							<img id="logo-image" src="<?php echo get_template_directory_uri();?>/img/logo-no-eyes-large.svg">
@@ -47,11 +47,21 @@
 							</div>  
 						</a>
 					</div> 
-					<div class="hamburger relative w-[60px] h-[36px] cursor-pointer transition-all duration-[0.25s] z-[999]" id="menu-btn">
-						<span class="hamburger-top w-[40px] h-[6px] absolute top-0 left-[10px] rotate-0 transition-all duration-500 bg-black translate-y-0 rounded-lg"></span>
-						<span class="hamburger-middle w-[60px] h-[6px] absolute top-0 left-0 rotate-0 transition-all duration-500 bg-black translate-y-[15px] rounded-lg"></span>
-						<span class="hamburger-bottom w-[40px] h-[6px] absolute top-0 left-[10px] rotate-0 transition-all duration-500 bg-black translate-y-[30px] rounded-lg"></span>
-					</div>		
+					<div class="menu-container relative">
+						<input class="checkbox" type="checkbox" name="" id="" />
+						<div class="hamburger hamburger-lines" id="menu-btn">
+							<span class="line line1 hamburger-top"></span>
+							<span class="line line2 hamburger-middle "></span>
+							<span class="line line3 hamburger-bottom "></span>
+						</div>
+						<div class="menu-items bg-yellow">
+							<li><a class="text-7xl font-bold uppercase" href="#">Home</a></li>
+							<li><a class="text-7xl font-bold uppercase" href="#">about</a></li>
+							<li><a class="text-7xl font-bold uppercase" href="#">blogs</a></li>
+							<li><a class="text-7xl font-bold uppercase" href="#">portfolio</a></li>
+							<li><a class="text-7xl font-bold uppercase" href="#">contact</a></li>
+						</div>		
+					</div>
 				</div>
 			</nav>
 		</div>
@@ -85,3 +95,20 @@
         }
     }
 	</script>
+
+<?php
+    $video = get_field('video_animation_header');
+    if ($video) { 
+    ?>
+        <div class="section bg-black">
+            <video class="header-animation w-full" muted="muted" class="w-full" src="<?php echo $video['url'] ?>"></video>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                const video = document.querySelector(".header-animation");
+                video.play();
+            });
+        </script>
+    <?php
+    }
+?>
