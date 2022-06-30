@@ -1,4 +1,4 @@
-<div class="section service-page-content pt-40">
+<div class="section service-page-content">
     <div class="container">
     <?php
         // Check value exists.
@@ -11,7 +11,7 @@
                 if( get_row_layout() == 'image_-_fullwidth' ):    
                     $image_1 = get_sub_field('post_image_1');
                 ?>
-                    <div class="row w-3/4 m-auto mb-20"> 
+                    <div class="row w-10/12 sm:w-3/4 m-auto mb-10"> 
                         <div class="col">
                             <img src="<?php echo $image_1['url']; ?>" class="w-full rounded-2xl object-cover">
                         </div>
@@ -21,7 +21,7 @@
                 elseif( get_row_layout() == 'text_editor_row' ):
                     $text = get_sub_field('free_text');    
                 ?>
-                <div class="row w-3/4 m-auto mb-20">
+                <div class="row w-10/12 sm:w-3/4 m-auto mb-20">
                     <div class="col">
                         <?php echo $text; ?>
                     </div>
@@ -32,8 +32,8 @@
                     $image_1 = get_sub_field('post_image_1');
                     $image_2 = get_sub_field('post_image_2');
                 ?>
-                    <div class="row grid grid-cols-2 gap-x-20 w-3/4 m-auto mb-20"> 
-                        <div class="col">
+                    <div class="row xs:grid xs:grid-cols-2 xs:gap-x-10 w-10/12 sm:w-3/4 m-auto mb-10"> 
+                        <div class="col mb-10 xs:mb-0">
                             <img src="<?php echo $image_1['url']; ?>" class="h-full rounded-2xl object-cover">
                         </div>
                         <div class="col">
@@ -46,8 +46,8 @@
                     $image_1 = get_sub_field('post_image_1');
                     $image_2 = get_sub_field('post_image_2');
                 ?>
-                    <div class="row grid grid-cols-3 gap-x-20 w-3/4 m-auto mb-20"> 
-                        <div class="col col-span-2">
+                    <div class="row xs:grid xs:grid-cols-3 xs:gap-x-10 w-10/12 sm:w-3/4 m-auto mb-10"> 
+                        <div class="col col-span-2 mb-10 xs:mb-0">
                             <img src="<?php echo $image_1['url']; ?>" class="h-full rounded-2xl object-cover">
                         </div>
                         <div class="col col-span-1">
@@ -68,24 +68,33 @@
                     $post_link = $card['post_link'];
                     $permalink = get_permalink($post_link->ID);
                     $post_video_link = $card['post_video_link'];
+                    $link_to_post = $card['link_to_post'];
+                    $card_title;
+                    if ($link_to_post) {
+                        $card_title = esc_html($post_link->post_title);
+                    } else {
+                        $card_title = $card['card_title'];
+                    }
                                                             
                     ?>
 
-                    <div class="row w-3/4 m-auto mb-20">
+                    <div class="row w-10/12 sm:w-3/4 m-auto mb-24">
                         <div class="col">
-                            <div class="grid grid-cols-5 bg-grey rounded-2xl overflow-hidden">
-                                <a href="<?php echo $permalink; ?>" class="col-span-3">
+                            <div class="lg:grid lg:grid-cols-5 bg-grey rounded-2xl overflow-hidden">
+                                <a href="<?php echo $permalink; ?>" class="lg:col-span-3">
                                     <img src="<?php echo $thumbnail_image['url'] ?>" class="col-span-3 h-full object-cover">
                                 </a>
-								<div class="flex flex-col justify-center p-10 col-span-2">
-									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle; ?></h3>
-									<h2 class="text-2xl"><?php echo esc_html( $post_link->post_title ); ?></h2>
-									<p><?php echo $post_excerpt; ?></p>
+								<div class="flex flex-col justify-center p-10 lg:col-span-2">
+                                    <a href="<?php echo $permalink; ?>">
+                                        <h3 class="uppercase font-bold text-sm tracking-widest mb-1"><?php echo $post_subtitle; ?></h3>
+                                        <h2 class="text-4xl mb-2"><?php echo $card_title; ?></h2>
+                                        <p><?php echo $post_excerpt; ?></p>
+                                    </a>
                                     <?php
                                     if ($post_video_link): ?>
                                         <div>
                                         <a class="vp-a" href="<?php echo $post_video_link['url']; ?>">	
-                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[80px] h-[80px] mt-5">
+                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mt-5">
                                             </a>
                                         </div>
                                     <?php
@@ -109,34 +118,64 @@
                     $post_excerpt_1 = $card1['post_excerpt_1'];
                     $post_link_1 = $card1['post_link_1'];
                     $permalink_1 = get_permalink( $post_link_1->ID );
+                    $post_video_link_1 = $card1['post_video_link_1'];
 
                     $thumbnail_image_2 = $card2['post_thumbnail_image_2'];
                     $post_subtitle_2 = $card2['post_subtitle_2'];
                     $post_excerpt_2 = $card2['post_excerpt_2'];
                     $post_link_2 = $card2['post_link_2'];
                     $permalink_2 = get_permalink( $post_link_2->ID );
+                    $post_video_link_2 = $card2['post_video_link_2'];
                     
                     ?>
-                    <div class="row w-3/4 m-auto grid grid-cols-2 gap-x-20 mb-20">
-                        <div class="col">
-                            <a href="<?php echo $permalink_1; ?>" class="flex flex-col bg-grey rounded-2xl overflow-hidden">
-								<img src="<?php echo $thumbnail_image_1['url'] ?>" class="h-full object-cover">
+                    <div class="row w-10/12 sm:w-3/4 m-auto sm:grid sm:grid-cols-2 sm:gap-x-24 mb-24">
+                        <div class="col mb-24 sm:mb-0">
+                            <div class="flex flex-col bg-grey rounded-2xl overflow-hidden">
+                                <a href="<?php echo $permalink_1; ?>">
+                                    <img src="<?php echo $thumbnail_image_1['url'] ?>" class="h-full object-cover">
+                                </a>
 								<div class="flex flex-col justify-center p-10">
-									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle_1; ?></h3>
-									<h2 class="text-2xl"><?php echo esc_html( $post_link_1->post_title ); ?></h2>
-									<p><?php echo $post_excerpt_1; ?></p>
+                                    <a href="<?php echo $permalink_1; ?>">
+                                        <h3 class="uppercase font-bold text-sm tracking-widest mb-1"><?php echo $post_subtitle_1; ?></h3>
+                                        <h2 class="text-4xl mb-2"><?php echo esc_html( $post_link_1->post_title ); ?></h2>
+                                        <p><?php echo $post_excerpt_1; ?></p>
+                                    </a>
+                                    <?php
+                                    if ($post_video_link_1): ?>
+                                        <div>
+                                        <a class="vp-a" href="<?php echo $post_video_link_1['url']; ?>">	
+                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mt-5">
+                                            </a>
+                                        </div>
+                                    <?php
+                                    endif;
+                                    ?>
 								</div>
-							</a>
+                            </div>
                         </div>
                         <div class="col">
-                            <a href="<?php echo $permalink_2; ?>" class="flex flex-col bg-grey rounded-2xl overflow-hidden">
-								<img src="<?php echo $thumbnail_image_2['url'] ?>" class="h-full object-cover">
+                            <div class="flex flex-col bg-grey rounded-2xl overflow-hidden">
+								<a href="<?php echo $permalink_2; ?>">
+                                    <img src="<?php echo $thumbnail_image_2['url'] ?>" class="h-full object-cover">
+                                </a>
 								<div class="flex flex-col justify-center p-10">
-									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle_2; ?></h3>
-									<h2 class="text-2xl"><?php echo esc_html( $post_link_2->post_title ); ?></h2>
-									<p><?php echo $post_excerpt_2; ?></p>
-								</div>
-							</a>
+                                    <a href="<?php echo $permalink_2; ?>">
+                                        <h3 class="uppercase font-bold text-sm tracking-widest mb-1"><?php echo $post_subtitle_2; ?></h3>
+                                        <h2 class="text-4xl mb-2"><?php echo esc_html( $post_link_2->post_title ); ?></h2>
+                                        <p><?php echo $post_excerpt_2; ?></p>
+                                     </a>
+                                     <?php
+                                    if ($post_video_link_2): ?>
+                                        <div>
+                                        <a class="vp-a" href="<?php echo $post_video_link_2['url']; ?>">	
+                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mt-5">
+                                            </a>
+                                        </div>
+                                    <?php
+                                    endif;
+                                    ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <?php
@@ -153,50 +192,95 @@
                     $post_excerpt_1 = $card1['post_excerpt_1'];
                     $post_link_1 = $card1['post_link_1'];
                     $permalink_1 = get_permalink( $post_link_1->ID );
+                    $post_video_link_1 = $card1['post_video_link_1'];
 
                     $thumbnail_image_2 = $card2['post_thumbnail_image_2'];
                     $post_subtitle_2 = $card2['post_subtitle_2'];
                     $post_excerpt_2 = $card2['post_excerpt_2'];
                     $post_link_2 = $card2['post_link_2'];
                     $permalink_2 = get_permalink( $post_link_2->ID );
+                    $post_video_link_2 = $card2['post_video_link_2'];
 
                     $thumbnail_image_3 = $card3['post_thumbnail_image_3'];
                     $post_subtitle_3 = $card3['post_subtitle_3'];
                     $post_excerpt_3 = $card3['post_excerpt_3'];
                     $post_link_3 = $card3['post_link_3'];
                     $permalink_3 = get_permalink( $post_link_3->ID );
-                    
+                    $post_video_link_3 = $card3['post_video_link_3'];
+
                     ?>
-                    <div class="row w-3/4 m-auto grid grid-cols-3 gap-x-20 mb-20">
-                        <div class="col">
-                            <a href="<?php echo $permalink_1; ?>" class="flex flex-col bg-grey rounded-2xl overflow-hidden">
-								<img src="<?php echo $thumbnail_image_1['url'] ?>" class="h-full object-cover">
-								<div class="flex flex-col justify-center p-10">
-									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle_1; ?></h3>
-									<h2 class="text-2xl"><?php echo esc_html( $post_link_1->post_title ); ?></h2>
-									<p><?php echo $post_excerpt_1; ?></p>
+                    <div class="row w-10/12 sm:w-3/4 m-auto lg:grid lg:grid-cols-3 lg:gap-x-10 mb-24">
+                        <div class="col mb-24 lg:mb-0">
+                            <div class="flex flex-col bg-grey rounded-2xl overflow-hidden">
+								<a href="<?php echo $permalink_1; ?>">
+                                    <img src="<?php echo $thumbnail_image_1['url'] ?>" class="h-full object-cover">
+                                </a>
+								<div class="flex flex-col justify-center p-7">
+                                    <a href="<?php echo $permalink_1; ?>">
+                                        <h3 class="uppercase font-bold text-sm tracking-widest mb-1"><?php echo $post_subtitle_1; ?></h3>
+                                        <h2 class="text-4xl mb-2"><?php echo esc_html( $post_link_1->post_title ); ?></h2>
+                                        <p><?php echo $post_excerpt_1; ?></p>
+                                    </a>
+                                    <?php
+                                    if ($post_video_link_1): ?>
+                                        <div>
+                                        <a class="vp-a" href="<?php echo $post_video_link_1['url']; ?>">	
+                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mt-5">
+                                            </a>
+                                        </div>
+                                    <?php
+                                    endif;
+                                    ?>
 								</div>
-							</a>
+                            </div>
+                        </div>
+                        <div class="col mb-24 lg:mb-0">
+                            <div class="flex flex-col bg-grey rounded-2xl overflow-hidden">
+								<a href="<?php echo $permalink_2; ?>">
+                                    <img src="<?php echo $thumbnail_image_2['url'] ?>" class="h-full object-cover">
+                                </a>    
+								<div class="flex flex-col justify-center p-7">
+                                    <a href="<?php echo $permalink_2; ?>">
+                                        <h3 class="uppercase font-bold text-sm tracking-widest mb-1"><?php echo $post_subtitle_2; ?></h3>
+									    <h2 class="text-4xl mb-2"><?php echo esc_html( $post_link_2->post_title ); ?></h2>
+									    <p><?php echo $post_excerpt_2; ?></p>
+                                    </a>
+                                    <?php
+                                    if ($post_video_link_2): ?>
+                                        <div>
+                                        <a class="vp-a" href="<?php echo $post_video_link_2['url']; ?>">	
+                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mt-5">
+                                            </a>
+                                        </div>
+                                    <?php
+                                    endif;
+                                    ?>
+								</div>
+                            </div>
                         </div>
                         <div class="col">
-                            <a href="<?php echo $permalink_2; ?>" class="flex flex-col bg-grey rounded-2xl overflow-hidden">
-								<img src="<?php echo $thumbnail_image_2['url'] ?>" class="h-full object-cover">
-								<div class="flex flex-col justify-center p-10">
-									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle_2; ?></h3>
-									<h2 class="text-2xl"><?php echo esc_html( $post_link_2->post_title ); ?></h2>
-									<p><?php echo $post_excerpt_2; ?></p>
+                            <div class="flex flex-col bg-grey rounded-2xl overflow-hidden">
+								<a href="<?php echo $permalink_3; ?>">
+                                    <img src="<?php echo $thumbnail_image['url'] ?>" class="h-full object-cover">
+                                </a>
+								<div class="flex flex-col justify-center p-7">
+                                    <a href="<?php echo $permalink_3; ?>">
+                                        <h3 class="uppercase font-bold text-sm tracking-widest mb-1"><?php echo $post_subtitle_3; ?></h3>
+									    <h2 class="text-4xl mb-2"><?php echo esc_html( $post_link_3->post_title ); ?></h2>
+									    <p><?php echo $post_excerpt_3; ?></p>
+                                    </a>
+                                    <?php
+                                    if ($post_video_link_3): ?>
+                                        <div>
+                                        <a class="vp-a" href="<?php echo $post_video_link_3['url']; ?>">	
+                                                <img src="<?php echo get_template_directory_uri();?>/img/black-play-icon.png" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mt-5">
+                                            </a>
+                                        </div>
+                                    <?php
+                                    endif;
+                                    ?>
 								</div>
-							</a>
-                        </div>
-                        <div class="col">
-                            <a href="<?php echo $permalink_3; ?>" class="flex flex-col bg-grey rounded-2xl overflow-hidden">
-								<img src="<?php echo $thumbnail_image['url'] ?>" class="h-full object-cover">
-								<div class="flex flex-col justify-center p-10">
-									<h3 class="uppercase font-bold text-lg"><?php echo $post_subtitle_3; ?></h3>
-									<h2 class="text-2xl"><?php echo esc_html( $post_link_3->post_title ); ?></h2>
-									<p><?php echo $post_excerpt_3; ?></p>
-								</div>
-							</a>
+                            </div>
                         </div>
                     </div>
                     <?php

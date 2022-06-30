@@ -200,3 +200,27 @@ add_action( 'init', function() {
 	remove_post_type_support( 'post', 'editor' );
 	remove_post_type_support( 'page', 'editor' );
    }, 99);
+
+function theme_setup() {
+    /**
+    * Featured Image Support
+    */
+    add_theme_support('post-thumbnails');
+    
+    add_image_size( 'thumb-270', 270);
+    add_image_size( 'thumb-582', 582);
+    
+    add_image_size( 'thumb-595', 595);
+    add_image_size( 'thumb-276x171', 276,171,true);
+    
+    
+
+    /**
+    * Nav Menus
+    */
+    register_nav_menus(array(
+        'header' => __('Header Main'),
+    ));
+}
+
+add_action('after_setup_theme', 'theme_setup');

@@ -2,7 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
- body {
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 16px;
+}
+@media only screen and (min-width: 640px) {
+   
+}
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 26px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 26px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+}
+body {
     font-family:"corporate-s";
 }
 #holding-page {
@@ -100,9 +161,9 @@
 .menu-container .checkbox {
     position: absolute;
     display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
+    height: 70px;
+    width: 46px;
+    top: 0;
     right: 5vw;
     z-index: 9999;
     opacity: 0;
@@ -140,9 +201,12 @@
 .menu-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg) !important;
 }
+.menu-container input[type="checkbox"]:checked ~ .hamburger-lines {
+    height: 50px;;
+}
 .menu-container .hamburger-lines .line {
     display: block;
-    height: 5px;
+    height: 8px;
     width: 60%;
     border-radius: 10px;
     background: #000;
@@ -153,7 +217,6 @@
     height: 60px;
   }
   .menu-container .hamburger-lines {
-    display: block;
     position: absolute;
     top: 17px;
     right: 5vw;
@@ -162,13 +225,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 34px;
-    width: 43px;
+    height: 42px;
+    width: 65px;
+
   }
   
   .menu-container .menu-items {
     display: flex;
-    padding-top: 120px;
+    padding-top: 17vh;
     height: 100vh;
     width: 50vw;
     transform: translateX(100%);
@@ -186,7 +250,7 @@
   
   .menu-container .menu-items li {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     font-weight: 500;
     transition: all .2s ease-in-out; 
   }
@@ -197,11 +261,17 @@
     font-weight: 500;
     padding: 0.7rem;
     transition: all .2s ease-in-out; 
+    font-weight: 600;
   }
   
   .menu-container .menu-items li:hover{
-    transform: scale(1.2); 
+    transform: scale(1.4); 
   }
   
   
- 
+ body:not(.page-id-13):not(.home) header {
+     margin-bottom: 10vh;
+ }
+.home .floating-contact {
+    display: none;
+}

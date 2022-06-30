@@ -8,6 +8,10 @@ module.exports = {
         grey: '#eceae8',        
       }
     },
+    letterSpacing: {
+      widest: '.25em',
+    },
+    
   },
   
   plugins: [
