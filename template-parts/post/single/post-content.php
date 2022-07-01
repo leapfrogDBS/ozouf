@@ -15,7 +15,7 @@
                 <h1 class="text-3xl uppercase font-bold mb-10 tracking-widest"><?php echo the_title(); ?></h1>
                 <img src="<?php echo $post_main_image['url'] ?>" class="rounded-2xl w-full">
                 
-                <div class="grid grid-cols-3 gap-x-20 mt-24">
+                <div class="lg:grid grid-cols-3 gap-x-20 mt-24">
                     <div class="post-copy col-span-2 text-2xl leading-10 child:mb-10">
                         <?php echo $post_copy ?>
                     </div>
