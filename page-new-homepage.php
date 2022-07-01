@@ -12,7 +12,6 @@ get_header();
  * Home hero
  */
 include(locate_template('template-parts/page/home/header.php'));
-include(locate_template('template-parts/page/home/services.php'));
 
 ?>
 <style>

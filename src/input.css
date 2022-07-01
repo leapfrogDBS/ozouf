@@ -162,7 +162,7 @@ body {
     position: absolute;
     display: block;
     height: 70px;
-    width: 46px;
+    width: 70px;
     top: 0;
     right: 5vw;
     z-index: 9999;
@@ -202,7 +202,7 @@ body {
     transform: rotate(-45deg) !important;
 }
 .menu-container input[type="checkbox"]:checked ~ .hamburger-lines {
-    height: 50px;;
+    height: 52px;;
 }
 .menu-container .hamburger-lines .line {
     display: block;
@@ -239,7 +239,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: -40px;
-    padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-align: center;
     position: fixed;
@@ -274,4 +273,21 @@ body {
  }
 .home .floating-contact {
     display: none;
+}
+@media only screen and (max-width: 980px) {
+    .menu-container .menu-items {
+        width: 75vw;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .menu-container .menu-items {
+        width: 100vw;
+    }
+    .menu-container .hamburger-lines {
+        height: 32px !important;
+        width: 40px;
+    }
+    .menu-container .hamburger-lines .line {
+        height: 6px;
+    }
 }

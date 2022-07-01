@@ -29,7 +29,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ozouf' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="header-container desktop-header-container hidden md:block bg-yellow">
+		<div class="header-container desktop-header-container bg-yellow">
 			<nav class="pt-10 pb-7">
 				<div class="w-[95%] ml-auto mr-0 flex justify-between items-center">
 					<div id="logo-container" class="logo-container w-[138px] md:w-[194px]">
@@ -58,19 +58,6 @@
 							<?php wp_nav_menu() ?>
 						</div>		
 					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="header-container mobile-header-container block md:hidden">
-			<nav class="fixed inset-x-0 top-0 pt-[25px] z-[999] md:pt-[48px] pb-[20px]">
-				<div class="container flex items-start justify-between p-x-[5%] w-full">
-					<div id="logo-container" class="logo-container w-[138px] md:w-[194px]">
-						<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-no-eyes-large.svg" /></a>
-					</div> 
-					<div class="hamburger relative w-[28px] h-[18px] cursor-pointer transition-all duration-[0.25s] z-[999] md:w-[40px]" id="mobile-menu-btn">
-						<span class="hamburger-top w-[28px] h-[2px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-0 md:w-[40px]"></span>
-						<span class="hamburger-bottom w-[28px] h-[2px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[16px] md:w-[40px]"></span>
-					</div>		
 				</div>
 			</nav>
 		</div>
