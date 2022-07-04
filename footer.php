@@ -17,22 +17,34 @@
         <div class="container">
             <div class="row w-3/4 m-auto sm:grid grid-cols-2  gap-x-32 gap-y-20 mb-32 lg:grid-cols-3">
                 <div class="col">
-                    <a href="#"><img class="service-icon" src="<?php echo get_template_directory_uri();?>/img/brand.svg"></a>
+                    <a href="/aniimation">
+                        <video class="footer-icon-animation w-full" muted="muted" class="w-full" src="<?php echo get_template_directory_uri();?>/mp4/animation.mp4"></video>    
+                    </a>
                 </div>
                 <div class="col">
-                    <a href="#"><img class="service-icon" src="<?php echo get_template_directory_uri();?>/img/website.svg"></a>
+                    <a href="/aniimation">
+                        <video class="footer-icon-animation w-full" muted="muted" class="w-full" src="<?php echo get_template_directory_uri();?>/mp4/animation.mp4"></video>    
+                    </a>
                 </div>
                 <div class="col">
-                    <a href="#"><img class="service-icon" src="<?php echo get_template_directory_uri();?>/img/video.svg"></a>
+                    <a href="/aniimation">
+                        <video class="footer-icon-animation w-full" muted="muted" class="w-full" src="<?php echo get_template_directory_uri();?>/mp4/animation.mp4"></video>    
+                    </a>
                 </div>
                 <div class="col">
-                    <a href="#"><img class="service-icon" src="<?php echo get_template_directory_uri();?>/img/animation.svg"></a>
+                    <a href="/aniimation">
+                        <video class="footer-icon-animation w-full" muted="muted" class="w-full" src="<?php echo get_template_directory_uri();?>/mp4/animation.mp4"></video>    
+                    </a>
                 </div>
                 <div class="col">
-                    <a href="#"><img class="service-icon" src="<?php echo get_template_directory_uri();?>/img/packaging.svg"></a>
+                    <a href="/aniimation">
+                        <video class="footer-icon-animation w-full" muted="muted" class="w-full" src="<?php echo get_template_directory_uri();?>/mp4/animation.mp4"></video>    
+                    </a>
                 </div>
                 <div class="col">
-                    <a href="#"><img class="service-icon" src="<?php echo get_template_directory_uri();?>/img/brand.svg"></a>
+                    <a href="/aniimation">
+                        <video class="footer-icon-animation w-full" muted="muted" class="w-full" src="<?php echo get_template_directory_uri();?>/mp4/animation.mp4"></video>    
+                    </a>
                 </div>
             </div>
         </div>
@@ -103,3 +115,27 @@
 
 </body>
 </html>
+
+<script>
+    const videos = document.querySelectorAll(".footer-icon-animation")
+
+    videos.forEach(video => {
+    video.addEventListener("mouseover", function () {
+        this.play()
+    })
+
+    video.addEventListener("mouseout", function () {
+        this.pause()
+        this.currentTime = 0;
+    })
+
+    video.addEventListener("touchstart", function () {
+        this.play()
+    })
+
+    video.addEventListener("touchend", function () {
+        this.pause()
+        this.currentTime = 0;
+    })
+    })
+</script>
