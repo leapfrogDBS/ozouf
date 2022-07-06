@@ -34,7 +34,7 @@
 				<div class="w-[95%] ml-auto mr-0 flex justify-between items-center">
 					<div id="logo-container" class="logo-container w-[138px] md:w-[194px]">
 						<a href="<?php echo get_home_url(); ?>">
-							<img id="logo-image" src="<?php echo get_template_directory_uri();?>/img/logo-no-eyes-large.svg">
+							<img id="logo-image" src="<?php echo get_template_directory_uri();?>/img/Ozouf.svg">
 							<div class="eyes">
 								<div class="eye">
 									<div class="ball">
