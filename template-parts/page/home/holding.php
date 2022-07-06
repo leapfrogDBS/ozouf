@@ -13,9 +13,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col flex flex-col mb-[50px]">
-                <h1 class="uppercase text-center text-lg md:text-2xl font-black tracking-widest mb-[70px]">New site coming soon</h1>
-                <div id="logo-container" class=" w-2/3 sm:w-1/2 md:w-[280px] m-auto">
+            <div class="col flex flex-col mb-[10vh]">
+                <h1 class="uppercase text-center text-lg md:text-xl font-black tracking-widest mb-[70px]">New site coming soon</h1>
+                <div id="logo-container" class=" w-2/3 sm:w-1/2 md:w-[320px] m-auto">
                     <video muted="muted" autoplay muted playsinline src="<?php echo get_template_directory_uri();?>/mp4/holding-animation.mp4"></video>
                     <div class="eyes">
                         <div class="eye">
@@ -28,6 +28,11 @@
                         </div>
                     </div>    
                 </div>
+            </div>
+        </div>
+        <div class="row mb-[5vh]">
+            <div class="col flex justify-center">
+                <a href="https://2021.ozouf.net/" class="uppercase text-center text-lg font-bold tracking-widest border-4 border-black border-solid px-4 py-3 rounded-xl ease-in-out hover:bg-black hover:text-yellow">View Previous Site</a>
             </div>
         </div>
         <div class="row">
