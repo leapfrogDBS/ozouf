@@ -65,13 +65,28 @@
     $video = get_field('video_animation_header');
     if ($video) { 
     ?>
-        <div class="section bg-black">
+        <div class="section bg-black hidden md:block">
             <video class="header-animation w-full" muted="muted" class="w-full" src="<?php echo $video['url'] ?>"></video>
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function(){
                 const video = document.querySelector(".header-animation");
                 video.play();
+            });
+        </script>
+    <?php
+    }
+
+	$mobile_video = get_field('mobile_video_animation_header');
+    if ($mobile_video) { 
+    ?>
+        <div class="section bg-black md:hidden">
+            <video class="mobile-header-animation w-full" muted="muted" class="w-full" src="<?php echo $mobile_video['url'] ?>"></video>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                const mobileVideo = document.querySelector(".mobile-header-animation");
+                mobileVideo.play();
             });
         </script>
     <?php
